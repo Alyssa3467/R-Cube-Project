@@ -1,0 +1,6 @@
+[submodule "Control_Circuitry/libraries/adafruit"]
+	path = Control_Circuitry/libraries/adafruit
+	url = https://github.com/adafruit/kicad-libs.git
+[submodule "Control_Circuitry/libraries/digikey"]
+	path = Control_Circuitry/libraries/digikey
+	url = https://github.com/Digi-Key/digikey-kicad-library.git

@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr USLetter 11000 8500
 encoding utf-8
-Sheet 2 3
+Sheet 2 4
 Title "RCube Control Circuitry"
 Date "2020-08-29"
 Rev ""
@@ -35,8 +35,6 @@ F 12 "Active" H 7600 5350 60  0001 L CNN "Status"
 	1    7400 4150
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	7675 2575 7625 2575
 $Comp
 L Device:Q_DUAL_PNP_C2C1E1E2 Q5
 U 1 1 5FBC5109
@@ -79,20 +77,12 @@ Wire Wire Line
 Connection ~ 7100 4150
 Text HLabel 7900 4150 2    50   Output ~ 0
 +5V_Pi
-Text Notes 6875 2175 0    50   ~ 0
-Logic Level Shifter
-Wire Notes Line style solid
-	6825 2225 7625 2225
-Wire Notes Line style solid
-	7625 2225 7625 2075
 Text Notes 6725 3900 0    50   ~ 0
 Raspberry Pi\n(per HAT specification)
 Wire Notes Line style solid
 	6675 3950 7625 3950
 Wire Notes Line style solid
 	7625 3950 7625 3700
-Wire Wire Line
-	7625 2775 7625 2575
 Wire Wire Line
 	4150 4550 4150 3400
 Wire Wire Line
@@ -132,26 +122,6 @@ F 3 "" H 5850 3850 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5850 3650 5850 3850
-$Comp
-L dk_Rectangular-Connectors-Headers-Male-Pins:0022232041 J2
-U 1 1 60306A05
-P 4650 3550
-F 0 "J2" H 5000 3325 50  0000 R CNN
-F 1 "22-23-2041" H 5000 3400 50  0000 R CNN
-F 2 "digikey-footprints:PinHeader_1x4_P2.54mm_Drill1.02mm" H 4850 3750 60  0001 L CNN
-F 3 "https://www.molex.com/pdm_docs/sd/022232041_sd.pdf" H 4850 3850 60  0001 L CNN
-F 4 "WM4202-ND" H 4850 3950 60  0001 L CNN "Digi-Key_PN"
-F 5 "0022232041" H 4850 4050 60  0001 L CNN "MPN"
-F 6 "Connectors, Interconnects" H 4850 4150 60  0001 L CNN "Category"
-F 7 "Rectangular Connectors - Headers, Male Pins" H 4850 4250 60  0001 L CNN "Family"
-F 8 "https://www.molex.com/pdm_docs/sd/022232041_sd.pdf" H 4850 4350 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/molex/0022232041/WM4202-ND/26671" H 4850 4450 60  0001 L CNN "DK_Detail_Page"
-F 10 "CONN HEADER VERT 4POS 2.54MM" H 4850 4550 60  0001 L CNN "Description"
-F 11 "Molex" H 4850 4650 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 4850 4750 60  0001 L CNN "Status"
-	1    4650 3550
-	-1   0    0    1   
-$EndComp
 Text GLabel 5150 5150 2    50   Input ~ 0
 +5VSB
 $Comp
@@ -431,67 +401,6 @@ F 3 "~" H 7250 5100 50  0001 C CNN
 	1    7250 5100
 	1    0    0    -1  
 $EndComp
-$Comp
-L dk_Transistors-FETs-MOSFETs-Single:BSS138 Q3
-U 1 1 5FAF4C6D
-P 7325 2875
-F 0 "Q3" H 7500 2825 60  0000 C CNN
-F 1 "BSS138" H 7600 2925 60  0000 C CNN
-F 2 "digikey-footprints:SOT-23-3" H 7525 3075 60  0001 L CNN
-F 3 "https://www.onsemi.com/pub/Collateral/BSS138-D.PDF" H 7525 3175 60  0001 L CNN
-F 4 "BSS138CT-ND" H 7525 3275 60  0001 L CNN "Digi-Key_PN"
-F 5 "BSS138" H 7525 3375 60  0001 L CNN "MPN"
-F 6 "Discrete Semiconductor Products" H 7525 3475 60  0001 L CNN "Category"
-F 7 "Transistors - FETs, MOSFETs - Single" H 7525 3575 60  0001 L CNN "Family"
-F 8 "https://www.onsemi.com/pub/Collateral/BSS138-D.PDF" H 7525 3675 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/on-semiconductor/BSS138/BSS138CT-ND/244294" H 7525 3775 60  0001 L CNN "DK_Detail_Page"
-F 10 "MOSFET N-CH 50V 220MA SOT-23" H 7525 3875 60  0001 L CNN "Description"
-F 11 "ON Semiconductor" H 7525 3975 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 7525 4075 60  0001 L CNN "Status"
-	1    7325 2875
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:R_Small R4
-U 1 1 5F5C1809
-P 7475 3275
-F 0 "R4" V 7625 3300 50  0000 C CNN
-F 1 "10kΩ" V 7550 3250 50  0000 C CNN
-F 2 "" H 7475 3275 50  0001 C CNN
-F 3 "~" H 7475 3275 50  0001 C CNN
-	1    7475 3275
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:R_Small R3
-U 1 1 5F5C5BAF
-P 7475 2575
-F 0 "R3" V 7325 2550 50  0000 C CNN
-F 1 "10kΩ" V 7400 2600 50  0000 C CNN
-F 2 "" H 7475 2575 50  0001 C CNN
-F 3 "~" H 7475 2575 50  0001 C CNN
-	1    7475 2575
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	7325 2325 7325 2575
-Wire Wire Line
-	7325 3075 7325 3275
-Wire Wire Line
-	7375 3275 7325 3275
-Connection ~ 7325 3275
-Wire Wire Line
-	7325 3275 7325 3375
-Wire Wire Line
-	7625 2575 7575 2575
-Connection ~ 7625 2575
-Wire Wire Line
-	7375 2575 7325 2575
-Connection ~ 7325 2575
-Wire Wire Line
-	7325 2575 7325 2675
-Wire Wire Line
-	7575 3275 7675 3275
 Wire Notes Line style solid
 	6675 5425 8250 5425
 Wire Notes Line style solid
@@ -519,21 +428,9 @@ Wire Wire Line
 	2800 4000 2850 4000
 Wire Notes Line
 	1900 1450 1900 1500
-Wire Wire Line
-	7325 2325 7350 2325
-Wire Wire Line
-	7300 3375 7325 3375
-Wire Notes Line style solid
-	6825 2075 6825 3450
-Wire Notes Line style solid
-	6825 3450 8100 3450
-Wire Notes Line style solid
-	8100 3450 8100 2075
-Wire Notes Line style solid
-	6825 2075 8100 2075
-Text HLabel 7350 2325 2    50   Input ~ 0
+Text HLabel 7175 2800 0    50   Input ~ 0
 SYS_OK_3.3v
-Text HLabel 7675 2575 2    50   Input ~ 0
+Text HLabel 7175 3000 0    50   Input ~ 0
 +3.3V_Pi
 Text HLabel 3500 2050 2    50   Output ~ 0
 +5_4
@@ -545,8 +442,6 @@ Wire Wire Line
 	4650 4075 4650 4550
 Text HLabel 7000 4150 0    50   Input ~ 0
 +5_4
-Text Label 7675 3275 0    50   ~ 0
-+5VSB
 Connection ~ 5150 4075
 NoConn ~ 3350 4550
 NoConn ~ 3450 4550
@@ -811,9 +706,6 @@ Wire Wire Line
 	2325 3400 4150 3400
 Wire Wire Line
 	3975 3200 2400 3200
-Connection ~ 3975 3200
-Wire Wire Line
-	4250 3200 4250 4550
 Wire Wire Line
 	2325 2300 2500 2300
 Wire Wire Line
@@ -834,27 +726,77 @@ Wire Wire Line
 	3950 4375 3950 4550
 Wire Wire Line
 	4025 3900 4025 4375
-Text HLabel 3925 3000 0    50   Output ~ 0
+Text HLabel 3925 3150 0    50   Output ~ 0
 PWR_OK
 Wire Wire Line
-	3925 3000 3975 3000
+	3925 3150 3975 3150
 Text HLabel 4750 4550 1    50   Input ~ 0
 SYS_OK_5v
-Text HLabel 7300 3375 0    50   Input ~ 0
+Text HLabel 7175 2875 0    50   Input ~ 0
 SYS_OK_5v
 Connection ~ 4375 1675
 Wire Wire Line
 	4375 1675 4500 1675
-Connection ~ 3975 3000
 Wire Wire Line
-	3975 3000 3975 3200
-Connection ~ 4250 3200
-Wire Wire Line
-	4250 3200 4700 3200
-Wire Wire Line
-	3975 2050 3975 3000
-Wire Wire Line
-	4700 2050 4700 3200
+	4700 2050 4700 2925
 Wire Wire Line
 	4700 2050 4925 2050
+$Sheet
+S 7175 2725 525  450 
+U 5F615DAB
+F0 "Logic Level Shifter" 50
+F1 "LevelShifter.sch" 50
+F2 "Vref_LOW" I L 7175 3000 50 
+F3 "Vref_HIGH" I L 7175 3100 50 
+F4 "SIG_3.3v" B L 7175 2800 50 
+F5 "SIG_5v" B L 7175 2875 50 
+$EndSheet
+Text GLabel 7175 3100 0    50   Input ~ 0
++5VSB
+$Comp
+L Connector_Generic:Conn_02x04_Row_Letter_Last J?
+U 1 1 5F692074
+P 4450 3450
+F 0 "J?" V 4875 3600 50  0000 R CNN
+F 1 "90131-0764" V 4800 3600 50  0000 R CNN
+F 2 "" H 4450 3450 50  0001 C CNN
+F 3 "https://www.molex.com/pdm_docs/sd/901301208_sd.pdf" H 4450 3450 50  0001 C CNN
+	1    4450 3450
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4250 2925 4700 2925
+Wire Wire Line
+	4350 3150 4450 3150
+Connection ~ 4450 3150
+Wire Wire Line
+	4450 3150 4550 3150
+Wire Wire Line
+	4650 3150 4550 3150
+Connection ~ 4550 3150
+Wire Wire Line
+	4650 3150 4750 3150
+Wire Wire Line
+	4750 3150 4750 3650
+Wire Wire Line
+	4750 3650 4650 3650
+Connection ~ 4650 3150
+Connection ~ 4650 3650
+Wire Wire Line
+	4250 2925 4250 3200
+Connection ~ 3975 3150
+Wire Wire Line
+	3975 3150 3975 3200
+Connection ~ 3975 3200
+Connection ~ 4250 3200
+Wire Wire Line
+	4250 3200 4250 4550
+Wire Wire Line
+	3975 2050 3975 3150
+Text Label 4350 3725 2    50   ~ 0
+R
+Text Label 4450 3725 2    50   ~ 0
+B
+Text Label 4550 3725 2    50   ~ 0
+G
 $EndSCHEMATC

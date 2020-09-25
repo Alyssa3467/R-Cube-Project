@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr USLetter 11000 8500
 encoding utf-8
-Sheet 3 3
+Sheet 4 4
 Title ""
 Date ""
 Rev ""
@@ -13,8 +13,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text HLabel 1325 6750 0    50   Input ~ 0
-PWR_OK
 Text HLabel 6900 2300 0    60   Input ~ 0
 +12_2
 NoConn ~ 7125 1600
@@ -441,15 +439,6 @@ Wire Wire Line
 	6700 5625 6450 5625
 Connection ~ 6450 5625
 Wire Wire Line
-	8550 5625 8400 5625
-Wire Wire Line
-	8550 5125 8400 5125
-Connection ~ 8550 5125
-Wire Wire Line
-	8550 4825 8550 5125
-Wire Wire Line
-	8550 5125 8550 5625
-Wire Wire Line
 	6450 5125 6450 5625
 Wire Wire Line
 	6450 5625 6450 6025
@@ -688,4 +677,8 @@ Text HLabel 2975 2100 2    60   Input ~ 0
 +5_4
 Text HLabel 1750 3500 0    60   Output ~ 0
 SYS_OK_3.3v
+Text Notes 2725 1925 2    50   ~ 0
+Teensy 4.1
+Text Notes 7950 1425 2    50   ~ 0
+Adafruit Grand Central
 $EndSCHEMATC
